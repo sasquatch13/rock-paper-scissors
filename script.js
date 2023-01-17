@@ -17,11 +17,11 @@ console.log(getComputerChoice());
 
 function round(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
-    if (playerSelection == "paper" && computerSelection == "rock") {
+    if (playerSelection == "rock" && computerSelection == "paper") {
         return "You Lose! Paper beats Rock"
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
         return "You Lose! Rock beats Scissors"
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
         return "You Lose! Scissors beats Paper"
     } else if (playerSelection == "paper" && computerSelection == "rock") {
         return "You Win! Paper beats Rock"
