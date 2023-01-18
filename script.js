@@ -14,9 +14,12 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+//let playerSelection = prompt("rock, paper, scissors");
+//prompt(playRound());
 
-function round(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
+    playerSelection = prompt("rock, paper, scissors");
     if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
         return "You Lose! Paper beats Rock"
 
@@ -38,6 +41,10 @@ function round(playerSelection, computerSelection) {
     } else {return "You Tied!"}
 }
 
-console.log(round("pAper"));
-console.log(round("rOck"));
-console.log(round("scIssors"));
+console.log(playRound());
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        
+     }
+}
