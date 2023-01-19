@@ -1,7 +1,7 @@
-let decide = Math.floor(Math.random() * 100);
-console.log(decide);
 
+//create function to make computer pick rock paper or scissors randomly
 function getComputerChoice() {
+    let decide = Math.floor(Math.random() * 100);
     let play;
     if (decide <= 33) {
         play = 'rock' 
@@ -13,59 +13,59 @@ function getComputerChoice() {
     return play;}
 }
 
-console.log(getComputerChoice());
-var youWin = 0;
-var computerWin = 0;
 
+//create iterable variables to keep score for game
+let youWin = 0;
+let computerWin = 0;
+
+//create function to play a single round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
     playerSelection = prompt("rock, paper, scissors");
     if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
+        alert("You Lose! Paper beats Rock")
         computerWin++
-        return "You Lose! Paper beats Rock"
 
     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
+        alert("You Lose! Rock beats Scissors")
         computerWin++
-        return "You Lose! Rock beats Scissors"
 
     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
+        alert("You Lose! Scissors beats Paper")
         computerWin++
-        return "You Lose! Scissors beats Paper"
 
     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
+        alert("You Win! Paper beats Rock")
         youWin++
-        return "You Win! Paper beats Rock"
         
-
     } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
+        alert("You Win! Rock beats Scissors")
         youWin++
-        return "You Win! Rock beats Scissors"
 
     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
+        alert("You Win! Scissors beats Paper")
         youWin++
-        return "You Win! Scissors beats Paper" 
 
-    } else {return "You Tied!"}
+    } else {alert("You Tied!")}
 }
-console.log(playRound())
-//console.log(game());
+console.log(game())
 
 console.log(youWin);
 console.log(computerWin);
 
-//function game() {
-    //for (let i = 0; i < 5; i++) {
-        //playRound()
-        //console.log(getComputerChoice())
-            //if (youWin == 3) {
-            //    return "you win"
+//create function that plays until someonee wins best out of 5
+function game() {
+    for (let i = 0; i < 10; i++) {
+        playRound()
+        console.log(getComputerChoice());
+            if (youWin == 3) {
+                alert("You win, best out of 5!")
+                break
             
-            //} else if (computerWin++ == 3) {
-            //    return "computer wins"
-            //}
+            } else if (computerWin == 3) {
+                alert("Computer wins, best out of 5!")
+                break
+            }
         
-    // }
-//}
-
-console.log(youWin);
-console.log(computerWin);
+     }
+}
