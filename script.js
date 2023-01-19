@@ -23,48 +23,48 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
     playerSelection = prompt("rock, paper, scissors");
     if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
-        alert("You Lose! Paper beats Rock")
-        computerWin++
+        alert("You Lose! Paper beats Rock");
+        computerWin++;
 
     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
-        alert("You Lose! Rock beats Scissors")
-        computerWin++
+        alert("You Lose! Rock beats Scissors");
+        computerWin++;
 
     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
-        alert("You Lose! Scissors beats Paper")
-        computerWin++
+        alert("You Lose! Scissors beats Paper");
+        computerWin++;
 
     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
-        alert("You Win! Paper beats Rock")
-        youWin++
+        alert("You Win! Paper beats Rock");
+        youWin++;
         
     } else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-        alert("You Win! Rock beats Scissors")
-        youWin++
+        alert("You Win! Rock beats Scissors");
+        youWin++;
 
     } else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
-        alert("You Win! Scissors beats Paper")
-        youWin++
+        alert("You Win! Scissors beats Paper");
+        youWin++;
 
-    } else {alert("You Tied!")}
+    } else {alert("You Tied!");}
 }
-console.log(game())
+console.log(playGame());
 
 console.log(youWin);
 console.log(computerWin);
 
-//create function that plays until someonee wins best out of 5
-function game() {
+//create function that plays until someone wins best out of 5
+function playGame() {
     for (let i = 0; i < 10; i++) {
         playRound()
         console.log(getComputerChoice());
             if (youWin == 3) {
-                alert("You win, best out of 5!")
-                break
+                alert("You win, best out of 5!");
+                break;
             
             } else if (computerWin == 3) {
-                alert("Computer wins, best out of 5!")
-                break
+                alert("Computer wins, best out of 5!");
+                break;
             }
         
      }
